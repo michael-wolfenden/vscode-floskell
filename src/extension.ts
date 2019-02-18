@@ -31,9 +31,9 @@ const registerFormatterProvider = (
     ctx: vscode.ExtensionContext,
     workingDirectory: string,
     logger: Logger,
-) => (brittanyVersion: string) => {
+) => (floskellVersion: string) => {
     logger.information(
-        `Registering document formatting provider using formatter:\n${brittanyVersion}`,
+        `Registering document formatting provider using formatter:\n${floskellVersion}`,
     )
 
     ctx.subscriptions.push(
