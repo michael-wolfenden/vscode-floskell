@@ -1,0 +1,35 @@
+{
+    "name": "vscode-brittany",
+    "displayName": "vscode-brittany",
+    "description": "Format Haskell code with Brittany in Visual Studio Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onLanguage:haskell"
+    ],
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/execa": "^0.9.0",
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "tslint": "^5.8.0",
+        "typescript": "^3.1.4",
+        "vscode": "^1.1.26"
+    },
+    "dependencies": {
+        "execa": "^1.0.0",
+        "fluture": "^10.3.0"
+    }
+}
